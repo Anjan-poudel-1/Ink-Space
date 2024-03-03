@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Component1Assignment.Circle">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAEAAYAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Circle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Component1Assignment.CommandParser">
+    <Position X="10.25" Y="1.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAYAEAIAAAMCAAAAAAABAAAAgQACEBi4=</HashCode>
+      <FileName>CommandParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Component1Assignment.DrawingCanvas">
+    <Position X="13.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABEgAAAgAAAAAYACAACgAgAAAAICAQAAAiAAAA=</HashCode>
+      <FileName>DrawingCanvas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Component1Assignment.Form1">
+    <Position X="15.25" Y="1" Width="2.5" />
+    <Members>
+      <Field Name="aboutToolStripMenuItem" Hidden="true" />
+      <Field Name="canvas" Hidden="true" />
+      <Field Name="chkSyntaxBtn" Hidden="true" />
+      <Field Name="codeTextBox" Hidden="true" />
+      <Field Name="commandLine" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="executeBtn" Hidden="true" />
+      <Field Name="fileToolStripMenuItem" Hidden="true" />
+      <Field Name="helpToolStripMenuItem" Hidden="true" />
+      <Field Name="infoToolStripMenuItem" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="loadToolStripMenuItem" Hidden="true" />
+      <Field Name="Logs" Hidden="true" />
+      <Field Name="logsTextBox" Hidden="true" />
+      <Field Name="menuStrip1" Hidden="true" />
+      <Field Name="saveToolStripMenuItem" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BwQABCAYCCAsABgAiCCCgECCAIAoAAAIQkABSwAAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Component1Assignment.Line">
+    <Position X="2" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAYAAAAAAwAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Line.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Component1Assignment.Rectangle">
+    <Position X="6" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAQAYAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Component1Assignment.Shape">
+    <Position X="5.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAEAAYAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>Shape.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Component1Assignment.ShapeFactory">
+    <Position X="7.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>ShapeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Component1Assignment.ShapesGroup">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Interface Name="Component1Assignment.ShapesGroup.Shapes" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ShapesGroup.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Interface>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShapesGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Component1Assignment.Triangle">
+    <Position X="8" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAEAAYAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Triangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,7 @@
+num1=100
+num2=10
+
+while num2<num1
+	circle num2
+	num2=num2+1
+endwhile

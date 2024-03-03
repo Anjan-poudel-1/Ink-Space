@@ -1,0 +1,9 @@
+circlee 50
+circle 100,100
+circle abc
+circle 90
+
+recxtangle 100,100
+rectangle 100,100,100
+rectangle abc,100
+rectangle 100,120

@@ -1,0 +1,12 @@
+C:\Users\AnJaN\source\repos\Component1Assignment\bin\Debug\Component1Assignment.exe.config
+C:\Users\AnJaN\source\repos\Component1Assignment\bin\Debug\Component1Assignment.exe
+C:\Users\AnJaN\source\repos\Component1Assignment\bin\Debug\Component1Assignment.pdb
+C:\Users\AnJaN\source\repos\Component1Assignment\obj\Debug\Component1Assignment.csproj.AssemblyReference.cache
+C:\Users\AnJaN\source\repos\Component1Assignment\obj\Debug\Component1Assignment.csproj.SuggestedBindingRedirects.cache
+C:\Users\AnJaN\source\repos\Component1Assignment\obj\Debug\Component1Assignment.Properties.Resources.resources
+C:\Users\AnJaN\source\repos\Component1Assignment\obj\Debug\Component1Assignment.csproj.GenerateResource.cache
+C:\Users\AnJaN\source\repos\Component1Assignment\obj\Debug\Component1Assignment.csproj.CoreCompileInputs.cache
+C:\Users\AnJaN\source\repos\Component1Assignment\obj\Debug\Component1Assignment.exe
+C:\Users\AnJaN\source\repos\Component1Assignment\obj\Debug\Component1Assignment.pdb
+C:\Users\AnJaN\source\repos\Component1Assignment\bin\Debug\Component1Assignment.xml
+C:\Users\AnJaN\source\repos\Component1Assignment\obj\Debug\Component1Assignment.DrawShapes.resources

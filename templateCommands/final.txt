@@ -1,0 +1,102 @@
+// variables defined
+
+primaryColor = black
+secondaryColor = gray
+doAnimation=false
+animationSpeed = 5
+headlightsOn=true
+numberOfStarRing=5
+ringSize=10
+
+
+// Program
+
+moveto -1000,320
+rectangle 2000,70
+
+
+// for car 
+pen secondaryColor 
+fill on
+moveto 80,290
+rectangle 70,50
+
+pen black
+moveto 110,290
+triangle 60,-60 60,0
+
+pen secondaryColor 
+rectangle 280,50
+
+pen black
+moveto 170,230
+rectangle 130,60
+pen secondaryColor 
+rectangle 2,70
+pen black
+
+
+moveto 300,230
+triangle 0,60 60,60
+pen secondaryColor 
+moveto 298,230
+rectangle 2,70
+
+moveto 250,250
+square 25
+
+moveto 190,250
+square 25
+pen black
+pen secondaryColor 
+moveto 350,290
+rectangle 60,50
+
+
+pen black
+moveto 310,340
+circle 22
+
+pen secondaryColor 
+circle 3
+fill off
+circle 15
+fill on
+
+pen black
+moveto 160,340
+circle 22
+pen secondaryColor 
+circle 3
+fill off
+circle 15
+fill on
+
+// whilecommands here
+moveTo 100,100
+starCount = 0
+fill off
+pen yellow 
+if doAnimation then pen white
+
+while starCount<numberOfStarRing
+	starCount=starCount+1
+	
+	ringSize=ringSize+starCount
+	circle ringSize
+	
+endwhile
+
+
+// -------If commands here-------
+
+if headlightsOn
+	moveto 390,300
+	pen yellow
+fill on
+	square 15
+endif
+
+
+if doAnimation then animate animationSpeed,0
+

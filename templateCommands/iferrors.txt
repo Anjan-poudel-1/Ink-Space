@@ -1,0 +1,11 @@
+num1=100
+value =false
+
+if true then
+moveto 150,150
+circle 50
+endif
+
+if num1===num1 then circle 10
+
+endif

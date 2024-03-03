@@ -1,0 +1,20 @@
+moveto 120,100
+pen green
+circle 40
+drawto 480,100
+fill on
+square 40
+drawto 480,350
+fill off
+square 40
+pen black
+drawto 120,350
+pen red
+circle 35
+drawto 120,100
+moveto 160,140
+rectangle 290,160
+pen blue
+fill on
+moveto 310,170
+triangle -80,85 80,85

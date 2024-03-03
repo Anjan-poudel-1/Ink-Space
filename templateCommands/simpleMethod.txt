@@ -1,0 +1,11 @@
+method myMethod(num1,num2,num3)
+	pen red
+	circle num1
+	drawto 200,200
+	rectangle num1,num2
+	circle num3
+endmethod
+
+
+moveto 50,50
+myMethod(50,100,60)

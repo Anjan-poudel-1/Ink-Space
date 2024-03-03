@@ -1,0 +1,10 @@
+moveto 230,200
+circle 140
+moveto 140,130
+square 30
+moveto 280,130
+square 30
+moveto 150,270
+rectangle 150,10
+
+colour redgreen

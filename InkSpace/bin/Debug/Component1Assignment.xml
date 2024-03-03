@@ -1,0 +1,612 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Component1Assignment</name>
+    </assembly>
+    <members>
+        <member name="T:Component1Assignment.AbstractCollection">
+            <summary>
+            the interface for any type of collection, regardless of structure.
+            </summary>
+        </member>
+        <member name="T:Component1Assignment.AbstractIterator">
+            <summary>
+             implementations of Iterator.
+            </summary>
+        </member>
+        <member name="T:Component1Assignment.Circle">
+            <summary>
+            Class for shape "circle"
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.Circle.#ctor(Component1Assignment.DrawingCanvas,System.Int32)">
+            <summary>
+            Constructor to initiate circle 
+            </summary>
+            <param name="_canvas"></param>
+            <param name="radius"></param>
+        </member>
+        <member name="M:Component1Assignment.Circle.set(Component1Assignment.DrawingCanvas,System.Int32[])">
+            <summary>
+            Sets the circle shape
+            </summary>
+            <param name="_canvas"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:Component1Assignment.Circle.draw(System.Drawing.Graphics)">
+            <summary>
+            Draw circle
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="T:Component1Assignment.CommandParser">
+            <summary>
+            this is the class created to check the syntax and run commands 
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.executeCommands(System.String,System.String,Component1Assignment.DrawingCanvas,Component1Assignment.DrawShapes,Component1Assignment.ConcreteCollection)">
+            <summary>
+            the function is called when execute button is clicked. It executes the command
+            </summary>
+            <param name="commandLineText"></param>
+            <param name="commands"></param>
+            <param name="drawingCanvas"></param>
+            <param name="form"></param>
+            <param name="collection"></param>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.executeCliCommand(System.String,System.String)">
+            <summary>
+            Function to execute the command line arguments
+            </summary>
+            <param name="_cliCommand"></param>
+            <param name="programCommands"></param>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.executeRunFunction(System.String)">
+            <summary>
+            If the command is "run" in command line interface, executeRunFunction is executed
+            </summary>
+            <param name="programcommands"></param>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.executeClearFunction">
+            <summary>
+             If the command is "clear" in command line interface, executeClearFunction is executed. Clears the canvas by erasing shape
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.executeResetFunction">
+            <summary>
+            Reset function uses  clear function.. then resets the pointer to 0,0
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.performMathematicalOperation(System.Int32,System.Int32,System.Char)">
+            <summary>
+            Function to return value after mathematical operration
+            </summary>
+            <param name="num1"></param>
+            <param name="num2"></param>
+            <param name="mathOperator"></param>
+            <returns> finalValue</returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.assignVariable(System.String,System.String)">
+            <summary>
+            Assigns value to  the key provided
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.checkCommandLineSyntax(System.String)">
+            <summary>
+            To check command line syntax
+            </summary>
+            <param name="commandLineText"></param>
+            <returns>Error if there are any</returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.checkCommandsSyntax(System.String)">
+            <summary>
+            Checks the syntax of command
+            </summary>
+            <param name="commands"></param>
+            <returns>Error if there are any</returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.checkCommandAndItsParameters(System.String[],System.Int32)">
+            <summary>
+            Checks the syntax of commands to draw
+            </summary>
+            <param name="line"></param>
+            <param name="lineNumber"></param>
+            <returns>error</returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.checkAssignmentErrors(System.String[],System.Int32)">
+            <summary>
+            Cjecks the error in assigning variables
+            </summary>
+            <param name="splitLineByAssignment"></param>
+            <param name="lineIteration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.checkConditionalErrors(System.String,System.Int32)">
+            <summary>
+            Checks errors while working with conditional operators
+            </summary>
+            <param name="line"></param>
+            <param name="lineIteration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.checkLoopErrors(System.String,System.Int32)">
+            <summary>
+            Checks error while working with loop
+            </summary>
+            <param name="line"></param>
+            <param name="lineIteration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.checkStatementOpeningAndClosure">
+            <summary>
+            This function runs at last, to check if there are correct number of closure statement for opening of if,while,method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.validateVariable(System.String,System.Int32)">
+            <summary>
+            Validation of declared variables.
+            </summary>
+            <param name="variableName"></param>
+            <param name="lineNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.getValueFromVariable(System.String)">
+            <summary>
+            Fetch value from stored variable
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.returnValueIfIsVariable(System.String)">
+            <summary>
+            Returns value of the variable if there is any, else returns the same string that was provided
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.isConditionalStatement(System.String)">
+            <summary>
+            Checks if the provided condition is valid conditional statemnent
+            </summary>
+            <param name="statement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.isConditionTrue(System.String)">
+            <summary>
+            Checks if the conditional value is true
+            </summary>
+            <param name="statement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.isNumber(System.String)">
+            <summary>
+            Returns true if the value can be parsed to number
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.isBoolean(System.String)">
+            <summary>
+            returs true if value can be parsed to boolean
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.isDefinedMethod(System.String)">
+            <summary>
+            Checks if the methos is already defined
+            </summary>
+            <param name="methodName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component1Assignment.CommandParser.IdentifyColor(System.String)">
+            <summary>
+            Function is used to return color by identifying it 
+            </summary>
+            <param name="_name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Component1Assignment.ConcreteCollection">
+            <summary>
+             implementations of Collection. These concrete collections can be structured in various ways. There is usually an iterator for each concrete collection.
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.ConcreteCollection.CreateIterator">
+            <summary>
+            Create Iterator
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Component1Assignment.ConcreteCollection.Count">
+            <summary>
+            Gets item count
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.ConcreteCollection.AddShape(Component1Assignment.Shape)">
+            <summary>
+            Add items to the collection
+            </summary>
+            <param name="shape"></param>
+        </member>
+        <member name="M:Component1Assignment.ConcreteCollection.clearShapes">
+            <summary>
+            Clears the shape
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.ConcreteCollection.GetShape(System.Int32)">
+            <summary>
+            Get item from collection
+            </summary>
+            <param name="IndexPosition"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Component1Assignment.DrawingCanvas">
+            <summary>
+            This class has properties of the canvas , i.e. pen colors, pointer ...
+            </summary>
+        </member>
+        <member name="T:Component1Assignment.DrawShapes">
+            <summary>
+            This is the main class that represents  form 
+            </summary>
+        </member>
+        <member name="P:Component1Assignment.DrawShapes.OverrideShapeColor">
+            <summary>
+            Getter, setter for oveerrideColor
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.thread">
+            <summary>
+            Thread function 
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.executeBtn_Click(System.Object,System.EventArgs)">
+            <summary>
+            When 'excute' buttton is clicked or clicked enter on command line
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.runExecuteCommand">
+            <summary>
+            The function is called when run button is pressed.. or enter clicked on command line
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.displayErrorLogs(System.Collections.Generic.List{System.String})">
+            <summary>
+            Function to print errors on error log
+            </summary>
+            <param name="datas"></param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.displaySuccessMessage(System.String)">
+            <summary>
+            To display success messsage , message will be passed as string
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.displaySyntax">
+            <summary>
+            displaySyntaxInfo
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.chkSyntaxBtn_Click(System.Object,System.EventArgs)">
+            <summary>
+            When check syntax button is clicked
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.canvas_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Paint object for the canvas.. when Refresh is hit, this function is called
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.clearCanvas">
+            <summary>
+            When clearCanvasa is called
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.generateFlash(System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            generating flash colour
+            </summary>
+            <param name="color1"></param>
+            <param name="color2"></param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.animateCanvasShapes(System.Int32,System.Int32)">
+            <summary>
+            To animate the shapes
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.shiftCanvasShapes(System.Int32,System.Int32)">
+            <summary>
+            shift the shapesfrom canvas
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.stopFlash">
+            <summary>
+            Command line arg defined to stop the thread running
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.resetCanvas">
+            <summary>
+            Resets the canvas
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.changeColor(System.Drawing.Color)">
+            <summary>
+            Change colour on the command "colour"
+            </summary>
+            <param name="newColor"></param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.saveToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            When save command is clicked
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.loadToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Load the file to commandBox
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.aboutToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            The about menu is called
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.infoToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Info button clicked
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.commandLine_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            calls  When enter is pressed on the command line
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Component1Assignment.DrawShapes.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Component1Assignment.DrawShapes.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Component1Assignment.ExcessLoopException">
+            <summary>
+            The exceeption arises if user performs loop in exceessive amount
+            </summary>
+        </member>
+        <member name="T:Component1Assignment.InvalidOpeningAndClosureException">
+            <summary>
+            The exception arises when there are not valid amount of closure for opening if,while,method commands
+            </summary>
+        </member>
+        <member name="T:Component1Assignment.InvalidVariableException">
+            <summary>
+            The exception arises if user would try to declare invalid variable
+            </summary>
+        </member>
+        <member name="T:Component1Assignment.Iterator">
+            <summary>
+            the interface for all  iterators. It implements two simple functions, next() and isCompleted().
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.Iterator.#ctor(Component1Assignment.ConcreteCollection)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="collection"></param>
+        </member>
+        <member name="M:Component1Assignment.Iterator.First">
+            <summary>
+            Gets first item
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Component1Assignment.Iterator.Next">
+            <summary>
+            Gets next item
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Component1Assignment.Iterator.IsCompleted">
+            <summary>
+            Check whether iteration is complete
+            </summary>
+        </member>
+        <member name="T:Component1Assignment.Line">
+            <summary>
+            To create a line drawn by command , moveto
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.Line.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.Line.#ctor(Component1Assignment.DrawingCanvas,System.Int32,System.Int32)">
+            <summary>
+            Create line with provided parameter
+            </summary>
+            <param name="_canvas"></param>
+            <param name="_x2"></param>
+            <param name="_y2"></param>
+        </member>
+        <member name="M:Component1Assignment.Line.set(Component1Assignment.DrawingCanvas,System.Int32[])">
+            <summary>
+            Set the value for line
+            </summary>
+            <param name="_canvas"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:Component1Assignment.Line.draw(System.Drawing.Graphics)">
+            <summary>
+            Drawing the line
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:Component1Assignment.Line.ToString">
+            <summary>
+            all classes inherit from object and ToString() is abstract in object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Component1Assignment.OperationsOverloadedException">
+            <summary>
+            The exception arises when user tries to perform operation for more than two operands
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:Component1Assignment.Rectangle">
+            <summary>
+            Rectangle class
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.Rectangle.#ctor(Component1Assignment.DrawingCanvas,System.Int32,System.Int32)">
+            <summary>
+            Constructor to set rectangle
+            </summary>
+            <param name="_canvas"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:Component1Assignment.Rectangle.set(Component1Assignment.DrawingCanvas,System.Int32[])">
+            <summary>
+            Set function override from its super class Shape
+            </summary>
+            <param name="_canvas"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:Component1Assignment.Rectangle.draw(System.Drawing.Graphics)">
+            <summary>
+            Draw rectangle
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:Component1Assignment.Shape.#ctor(Component1Assignment.DrawingCanvas)">
+            <summary>
+            Defines shpe using params from the canvas
+            </summary>
+            <param name="_canvas"></param>
+        </member>
+        <member name="M:Component1Assignment.Shape.setColor(System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Override the coolor of shape
+            </summary>
+            <param name="penColor"></param>
+            <param name="fillColor"></param>
+        </member>
+        <member name="M:Component1Assignment.Shape.shiftOrigin(System.Int32,System.Int32)">
+            <summary>
+            Override the set origin of shape
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:Component1Assignment.ShapeFactory.getShape(System.String)">
+            <summary>
+            Getshape command
+            </summary>
+            <param name="shapeType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Component1Assignment.ShapesGroup">
+            <summary>
+            Interface to define the shapes
+            </summary>
+        </member>
+        <member name="T:Component1Assignment.Triangle">
+            <summary>
+            CClass to define the shape , "Triangle"
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.Triangle.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Component1Assignment.Triangle.#ctor(Component1Assignment.DrawingCanvas,System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Parameterised constructor
+            </summary>
+            <param name="_canvas"></param>
+            <param name="p1"></param>
+            <param name="p2"></param>
+        </member>
+        <member name="M:Component1Assignment.Triangle.set(Component1Assignment.DrawingCanvas,System.Int32[])">
+            <summary>
+            Set values for triangle 
+            </summary>
+            <param name="_canvas"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:Component1Assignment.Triangle.shiftOrigin(System.Int32,System.Int32)">
+            <summary>
+            we need to shift every point , not just the origin for triangle 
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:Component1Assignment.Triangle.draw(System.Drawing.Graphics)">
+            <summary>
+            Draw triangle 
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:Component1Assignment.Triangle.ToString">
+            <summary>
+            all classes inherit from object and ToString() is abstract in object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Component1Assignment.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Component1Assignment.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Component1Assignment.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

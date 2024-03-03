@@ -1,0 +1,12 @@
+radius =20
+num1=0
+
+moveto 150,150
+
+while num1<= 5
+	num1=num1+1
+	circle radius
+	radius=radius+20
+endwhile
+
+

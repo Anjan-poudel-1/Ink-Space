@@ -1,0 +1,7 @@
+if true then square 50
+if 10!=12 then moveto 150,150
+if 10>=10 then rectangle 100,70
+
+
+if false then circle 60
+if 100==200 then circle 100
